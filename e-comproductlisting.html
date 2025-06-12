@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bakery E-Commerce</title>
+  <style>
+    :root {
+      --main-bg: #fffaf0;
+      --accent: #e76f51;
+      --dark: #264653;
+      --highlight: #2a9d8f;
+      --sold-out: #b00020;
+      --text: #444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--main-bg);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      padding-top: 130px; /* Header height + spacing */
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--dark);
+      color: white;
+      padding: 1rem 2rem;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    /* INTRO + SEARCH */
+    .intro {
+      text-align: center;
+      padding: 1rem 1rem 0.5rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar input[type="text"] {
+      width: 300px;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .search-bar input[type="text"]:focus {
+      border-color: var(--highlight);
+      box-shadow: 0 0 5px var(--highlight);
+    }
+
+    /* PRODUCT GRID */
+    .product-list {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      position: relative;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .product h2 {
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .product summary {
+      cursor: pointer;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    .product details {
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--highlight);
+      margin-bottom: 1rem;
+    }
+
+    .sold-out::after {
+      content: "SOLD OUT";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--sold-out);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label.add-to-cart {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent);
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    input[type="checkbox"]:checked + label.add-to-cart {
+      background-color: var(--dark);
+    }
+
+    input[type="checkbox"]:checked + label.add-to-cart::after {
+      content: " ✔ Added";
+    }
+
+    .sold-out label.add-to-cart {
+      background-color: #ccc;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Header -->
+  <header>
+    <div class="nav-container">
+      <h1>🍞 Bakery Store</h1>
+      <nav>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#login">login</a></li>
+          <li><a href="#home">home</a></li>
+          <li><a href="#sign">signup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="intro">
+   <h1> <i>Welcome to our delicious bakery store! Freshly baked with love every day.</i></h1>
+  </section>
+
+  <!-- Search -->
+  <section class="search-bar">
+    <input type="text" placeholder="Search for treats...">
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="product-list">
+    <article class="product">
+      <h2>Chocolate Chip Cookies</h2>
+      <details>
+        <summary>Description</summary>
+        <p>Crispy on the outside, chewy on the inside. Baked fresh daily!</p>
+      </details>
+      <p class="price">$4.99</p>
+      <input type="checkbox" id="prod1">
+      <label for="prod1" class="add-to-cart">Add to Cart</label>
+    </article>
+
+    <article class="product sold-out">
+      <h2>Blueberry Muffins</h2>
+      <details>
+        <summary>Description</summary>
+        <p>Moist muffins loaded with juicy blueberries.</p>
+      </details>
+      <p class="price">$3.49</p>
+      <input type="checkbox" id="prod2" disabled>
+      <label for="prod2" class="add-to-cart">Add to Cart</label>
+    </article>
+
+    <article class="product">
+      <h2>Artisan Sourdough Bread</h2>
+      <details>
+        <summary>Description</summary>
+        <p>Handmade sourdough with a perfectly crisp crust.</p>
+      </details>
+      <p class="price">$6.25</p>
+      <input type="checkbox" id="prod3">
+      <label for="prod3" class="add-to-cart">Add to Cart</label>
+    </article>
+
+    <article class="product">
+      <h2>Carrot Cake Slice</h2>
+      <details>
+        <summary>Description</summary>
+        <p>Moist carrot cake topped with rich cream cheese frosting.</p>
+      </details>
+      <p class="price">$3.99</p>
+      <input type="checkbox" id="prod4">
+      <label for="prod4" class="add-to-cart">Add to Cart</label>
+    </article>
+
+    <article class="product sold-out">
+      <h2>Gluten-Free Brownies</h2>
+      <details>
+        <summary>Description</summary>
+        <p>Fudgy and gluten-free brownies for all sweet lovers!</p>
+      </details>
+      <p class="price">$5.49</p>
+      <input type="checkbox" id="prod5" disabled>
+      <label for="prod5" class="add-to-cart">Add to Cart</label>
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: bakery@example.com</p>
+    <p>Phone: +1 555 123 4567</p>
+  </footer>
+
+</body>
+</html>
+
+
+

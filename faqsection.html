@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ Section</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #dfe9f3);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-section h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #2c3e50;
+    }
+
+    details {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      background: #f9fbfd;
+      border: 1px solid #dbe5f1;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    details:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: scale(1.01);
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 15px 20px;
+      cursor: pointer;
+      position: relative;
+      color: #1a73e8;
+      user-select: none;
+    }
+
+    summary::after {
+      content: "▶";
+      font-size: 0.8em;
+      position:absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+
+    details p {
+      padding: 0 20px 15px 20px;
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="faq-section">
+    <h1>Frequently Asked Questions</h1>
+
+    <details>
+      <summary>1. What is this website about?</summary>
+      <p>This website provides useful tutorials and resources on web development and design.</p>
+    </details>
+
+    <details>
+      <summary>2. How can I contact support?</summary>
+      <p>You can reach us through the contact form or email us at support@example.com.</p>
+    </details>
+
+    <details>
+      <summary>3. Is there a fee to access the tutorials?</summary>
+      <p>No, all tutorials are available for free to support learners worldwide.</p>
+    </details>
+
+    <details>
+      <summary>4. Can I contribute my own content?</summary>
+      <p>Yes! Please visit our "Contribute" page to learn how to submit your tutorials or tips.</p>
+    </details>
+
+    <details>
+      <summary>5. Do I need to sign up?</summary>
+      <p>No sign-up is required to view content, but creating an account allows you to save favorites and comment.</p>
+    </details>
+
+  </section>
+
+</body>
+</html>
+

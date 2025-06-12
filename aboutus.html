@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Fictional Co.</title>
+  <style>
+    :root {
+      --color-history: #ffe5b4;
+      --color-mission: #b2f0e3;
+      --color-team: #dab6fc;
+      --accent-dark: #264653;
+      --hover-scale: 1.02;
+      --transition-time: 0.3s;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    body {
+     background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+    }
+
+    header {
+      background-color: var(--accent-dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 8px solid var(--accent-dark);
+      transition: transform var(--transition-time), box-shadow var(--transition-time);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    section:hover {
+      transform: scale(var(--hover-scale));
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #222;
+      font-size: 1.75rem;
+    }
+
+    #history {
+      background-color: var(--color-history);
+    }
+
+    #mission {
+      background-color: var(--color-mission);
+    }
+
+    #team {
+      background-color: var(--color-team);
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.75rem;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    footer {
+     background-color: #264653;
+     color: white;
+     text-align: center;
+     padding: 2rem 1rem;
+     margin-top: 2rem;
+     font-size: 0.95rem;
+    }
+
+    .footer-content {
+     max-width: 1000px;
+     margin: 0 auto;
+    }
+
+    footer nav {
+     margin: 1rem 0;
+    }
+
+    footer a {
+     color: #f4a261;
+     text-decoration: none;
+     margin: 0 1rem;
+     transition: color 0.3s;
+    }
+    footer a:hover {
+    color: #e9c46a;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <main>
+   <section id="history">
+     <h2>Our History</h2>
+      <p>Founded in 2010, Fictional Co. began as a small startup in a shared coworking space with a team of just three passionate individuals. The original goal was to create simple software tools to help local businesses automate their operations.</p>
+      <p>In 2013, we launched our first successful product — a cloud-based scheduling platform — which quickly gained traction and attracted our first round of angel investors. This marked a turning point, allowing us to expand our team and move into our first dedicated office space.</p>
+      <p>Over the next few years, we diversified our product offerings, embracing mobile-first technologies, AI integration, and design thinking principles. By 2017, Fictional Co. had grown into a mid-sized company with clients across North America and Europe.</p>
+      <p>In 2020, during the global pandemic, we shifted to a fully remote work model, which not only ensured business continuity but also expanded our talent pool to a global level. We embraced digital transformation internally and helped hundreds of our clients do the same.</p>
+      <p>Today, Fictional Co. is a recognized name in the tech industry, known for innovation, inclusivity, and putting people first. Our journey is ongoing, and we continue to evolve with the same passion and purpose that sparked our beginning.</p>
+    </section>
+
+   <section id="mission">
+  <h2>Our Mission</h2>
+  <p>At Fictional Co., our mission is to empower individuals and organizations through thoughtful, human-centered technology. We believe that digital tools should simplify lives, enhance productivity, and create meaningful experiences for users around the world.</p>
+  
+  <p>Our goal is not just to build software — but to build trust. We are committed to transparency, ethical design, and data privacy in every solution we deliver. We strive to ensure that innovation is accessible, intuitive, and inclusive, regardless of background or ability.</p>
+  
+  <p>We continuously invest in research and development, allowing us to stay ahead of trends and offer cutting-edge technology that makes a difference. Whether it's artificial intelligence, cloud infrastructure, or next-gen user interfaces, we aim to harness technology to solve real-world challenges.</p>
+  
+  <p>We also take pride in our sustainability efforts — reducing digital waste, optimizing code for energy efficiency, and partnering with environmentally responsible vendors. Because we believe doing the right thing shouldn't be optional — it should be essential.</p>
+  
+  <p>Ultimately, our mission is to leave a lasting, positive impact — not just on our industry, but on the lives we touch. Every product, partnership, and policy at Fictional Co. is a step toward a more connected, thoughtful, and empowered future.</p>
+</section>
+
+<section id="team">
+  <h2>Our Team</h2>
+  <p>Our team is a diverse blend of creatives, engineers, strategists, and visionaries who share a common purpose: to build meaningful technology that makes life better. We come from different backgrounds and cultures, united by our shared values of innovation, empathy, and excellence.</p>
+  
+  <p>From product designers and software developers to marketing experts and customer success champions, every member of our team plays a critical role in shaping the future of Fictional Co. We believe the best ideas come from collaboration, and we actively foster a culture where every voice is heard.</p>
+  
+  <p>We encourage continuous learning and personal growth, offering mentorship, workshops, and flexible career paths. Our open and inclusive environment allows team members to challenge assumptions, take ownership of their work, and celebrate both big wins and small victories together.</p>
+  
+  <p>Despite being spread across different cities and time zones, we stay connected through strong communication, shared goals, and an unwavering commitment to quality. Whether we’re brainstorming a new product, solving a complex technical problem, or planning a virtual team lunch, we do it together — with heart and purpose.</p>
+  
+  <p>Our people are our greatest asset. Their talent, passion, and resilience are the foundation on which Fictional Co. stands — and they’re the reason we continue to grow, adapt, and succeed in an ever-changing world.</p>
+</section>
+
+  </main>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Fictional Co. All rights reserved.</p>
+    <nav>
+      <a href="#history">History</a>
+      <a href="#mission">Mission</a>
+      <a href="#team">Team</a>
+    </nav>
+    <p>Contact us at: <a href="mailto:info@fictionalco.com">info@fictionalco.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

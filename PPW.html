@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4a90e2, #1c3b70);
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #ffffff;
+      width: 0;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(74, 144, 226, 0.2);
+      height: calc(100vh - 200px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    main::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    main::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    main::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+
+    main::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #4a90e2;
+      padding-bottom: 5px;
+    }
+
+    article {
+      background-color: #2a2a2a;
+      padding: 15px;
+      border-left: 4px solid #4a90e2;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #4a90e2;
+      background-color: #444;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1c3b70;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      background-color: #111;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        height: auto;
+        padding: 20px;
+        margin: 20px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kunjal's Portfolio</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#Skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I’m Kunjal! I’m an IT student with a strong interest in both technology and personal growth. I believe in facing challenges head-on and never backing down from a problem—confidence and resilience are a big part of who I am.
+
+        Outside of my academic life, I enjoy journaling. It helps me stay grounded, reflect on my thoughts, and stay connected to myself in a busy world. Through this space, I hope to share more of my journey, my work, and the things that inspire me every day.</p>
+    </section>
+
+    <section id="Skills">
+      <h2>Skills</h2>
+      <article>
+        <ul>
+          <li>Good Communication</li>
+          <li>Teamwork</li>
+          <li>Time Management</li>
+          <li>Problem-Solving</li>
+          <li>Adaptability</li>
+          <li>Leadership</li>
+          <li>Critical Thinking</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>Project: Portfolio Website / Task Manager</h3>
+        <p>This very website! Designed to showcase my skills and projects using semantic HTML and modern CSS styling.</p>
+      </article>
+
+      <article>
+        <h3>Project: Product Landing Page</h3>
+        <p>This page represent the new product that has been going to launche soon. In which we can pre-order the product</p>
+      </article>
+ 
+      <article>
+        <h3>Project: Blog Post Template</h3>
+        <p>This is Blog Post website</p>
+      </article>
+
+    </section>
+    
+    
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kunjal. All rights reserved.
+  </footer>
+
+</body>
+</html>

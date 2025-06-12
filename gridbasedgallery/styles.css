@@ -1,0 +1,109 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+ body {
+    background: url('https://www.transparenttextures.com/patterns/white-wall-3.png') repeat;
+  }
+  
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+/* Responsive layout */
+@media (min-width: 600px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: calc(33.333% - 20px);
+  }
+}
+
+/* Zoom overlay */
+.zoom {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.zoom img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom:target {
+  display: block;
+}
+
+.zoom .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.zoom .close:hover {
+  color: #ccc;
+}
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ELYSIAN LuxuryWatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111111;
+      color: #e5e5e5;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+
+    header {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: #d4af37;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #1c1c1c;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .product-description {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #d4af37;
+      background-color: #252525;
+      border-radius: 8px;
+    }
+
+    .product-description h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #f9f9f9;
+    }
+
+    .product-description i {
+      color: #d4af37;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #d4af37;
+      color: #111;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: #c9a032;
+      transform: scale(1.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-top: 2px solid #333;
+    }
+
+    form h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #f5f5f5;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      display: inline-block;
+      color: #ddd;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #555;
+      border-radius: 5px;
+      width: 100%;
+      background-color: #2b2b2b;
+      color: #f0f0f0;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      border-color: #d4af37;
+      outline: none;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 0.5rem;
+      accent-color: #d4af37;
+    }
+
+    input[type="submit"] {
+      background: #d4af37;
+      color: #111;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #c9a032;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #999;
+      background-color: #000;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      .product-description {
+        padding: 1rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ELYSIAN LuxuryWatch</h1>
+    <p>"Where Time Meets Eternal Style."</p>
+  </header>
+
+  <main class="container">
+    <section class="product-description">
+      <h2>Why blend in when you were meant to define timelessness?</h2>
+      <p>Step into a world where every second tells your story—
+        not just measured in moments, but in elegance, legacy, and precision.</p>
+      <p>This isn’t just a watch. It’s a quiet revolution on your wrist.</p>
+      <i>Own your time. Wear your legacy.</i><br>
+      <a href="#signup" class="cta-button">Pre-order Now</a>
+    </section>
+
+    <section id="signup">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form>
+        <div>
+          <label for="fullname">Full Name</label><br />
+          <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required />
+        </div>
+
+        <div>
+          <label for="email">Email Address</label><br />
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="updates" />
+            I want to receive product updates and offers.
+          </label>
+        </div>
+
+        <input type="submit" value="Subscribe" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kunjal. All rights reserved.
+  </footer>
+
+</body>
+</html>
+

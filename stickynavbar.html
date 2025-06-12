@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticky Navbar Example</title>
+  <style>
+    /* Basic Reset and Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+
+    /* Sticky Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      padding: 1em;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    #section1 { background-color: #f4f4f4; }
+    #section2 { background-color: #e4e4ff; }
+    #section3 { background-color: #d4ffd4; }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="section1">
+    <h2>Section 1</h2>
+    <p>Welcome to Section 1. Scroll down to explore more sections.</p>
+    
+  </section>
+
+  <section id="section2">
+    <h2>Section 2</h2>
+    <p>This is Section 2. The navbar should still be visible at the top.</p>
+    
+  </section>
+
+  <section id="section3">
+    <h2>Section 3</h2>
+    <p>You made it to Section 3! Try scrolling back up too.</p>
+    
+  </section>
+
+</body>
+</html>
