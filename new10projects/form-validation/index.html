@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Signup Form</h2>
+  <form id="signup-form" novalidate>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <small class="error"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email">
+      <small class="error"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+      <small class="error"></small>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

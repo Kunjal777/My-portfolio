@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f7fa; /* Light teal background */
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #00796b;
+}
+
+input {
+  width: 65%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #00796b; /* Teal */
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004d40; /* Darker teal */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f1f8e9; /* Light greenish background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #c8e6c9;
+}
+
+.task-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li button:first-child {
+  background-color: #43a047; /* Green */
+}
+
+li button:last-child {
+  background-color: #e53935; /* Red */
+}
+
+li button:hover {
+  opacity: 0.9;
+}
+
